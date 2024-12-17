@@ -1,0 +1,224 @@
+%______________________________________________________________________________________________________________________
+% @brief    LaTeX2e Resume for Kathryn D. Huff
+
+\documentclass[margin,line]{resume}
+\usepackage{bibentry}
+\usepackage[pdftex, pdfauthor={J. S. Rehak}, pdftitle={J.S. Rehak CV}]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+  }
+    
+\newcommand{\Cpp}[1][]{\textrm{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bfseries++}#1}}
+\urlstyle{tt}
+\usepackage{xspace}
+%\textheight=10.75in
+\newcommand{\Cyclus}{\textsc{Cyclus}\xspace}%
+\newcounter{daggerfootnote}
+\newcommand*{\daggerfootnote}[1]{%
+    \setcounter{daggerfootnote}{\value{footnote}}%
+    \renewcommand*{\thefootnote}{\fnsymbol{footnote}}%
+    \footnote[2]{#1}%
+    \setcounter{footnote}{\value{daggerfootnote}}%
+    \renewcommand*{\thefootnote}{\arabic{footnote}}%
+}
+\newcommand{\dagfoot}{${}^\dagger$}
+%______________________________________________________________________________________________________________________
+\begin{document}
+\name{\Large Jessica S. Rehak}
+\begin{resume}
+    % Contact Information
+  \section{\mysidestyle Contact\\Information}
+  phone: (401) 573-7417 $\cdot$ email: \verb`jessica.s.rehak@gmail.com`\newline
+  github: \url{https://github.com/JessicaRehak}\hfill \\
+
+    %__________________________________________________________________________________________________________________
+    %Resume Objective
+    %\section{\mysidestyle Objective}
+    %          Seeking research and practical opportunities in
+    %           nuclear engineering and scientific computation to
+    %           support the next generation of reliable and safe
+    %           nuclear energy.%
+    %__________________________________________________________________________________________________________________
+    % Research Interests
+    % \section{\mysidestyle Research\\Interests}
+    %             Advanced nuclear reactors and fuel cycles, multi-physics
+    %             simulation, nuclear fuel cycle analysis,
+    %             scientific computation.
+    %             %
+    %__________________________________________________________________________________________________________________
+    % Academic Appointments
+    %           \vspace{-2mm}
+    %\section{\mysidestyle Academic\\Appointments}
+    %           \vspace{-2mm}\\\vspace{-3mm}%
+    %__________________________________________________________________________________________________________________
+    % Education
+    \section{\mysidestyle PhD}
+    \textbf{University of California, Berkeley}, \textsc{Nuclear
+      Engineering}\hfill \textbf{Summer 2021}\vspace{-3mm}\\\vspace{-1mm}%
+    \begin{list2}
+        \item[] A Novel Tool for the Assessment and Validation of Acceleration Methods for Solving the Neutron Transport Equation
+        \item[] Advisor:  Professor Rachel N. Slaybaugh
+    \end{list2}\vspace{-1.5mm}
+    \section{\mysidestyle MS}
+    \textbf{University of California, Berkeley}, \textsc{Nuclear
+      Engineering}\hfill\textbf{Spring 2017}\vspace{-3mm}\\\vspace{-1mm}%
+    \begin{list2}
+        \item[] Implementation of Weighted Delta-tracking with
+          scattering in Serpent 2
+        \end{list2}\vspace{-1.5mm}
+    \section{\mysidestyle MEM}
+    \textbf{Old Dominion University -- Norfolk VA},
+    \textsc{Engineering Management}%\daggerfootnote{Awarded or issued under the name Joshua. S. Rehak}\hfill\textbf{Fall 2015}\vspace{-3mm}\\\vspace{-1mm}%
+    \section{\mysidestyle BS}
+    \textbf{University of Maryland, College Park},
+    \textsc{Physics, Astronomy}\hfill\textbf{Spring 2007}\vspace{-3mm}\\\vspace{-1mm}%
+\vspace{-1.5mm}
+    %__________________________________________________________________________________________________________________
+    % Work & Research Experience
+    \section{\mysidestyle Work \& Research \\Experience}
+    \textbf{Kairos Energy}, Alameda, CA \\
+                \textsl{Reactor Analyist (Engineer III)} \hfill
+                \textbf{September 2021 -- October 2023} \\
+                \textsl{Supervisor: Nader Satvat} -- \verb`satvat@kairospower.com`
+                \begin{list2}
+                \item[] Developed a series of Python 3-based deployable libraries designed to work in concert to support the rapid iterative design and evaluation of novel pebble bed reactors. Some of the features included:
+                \begin{list2}
+                \item conversion of material specifications provided in various formats into a standardized and shared elemental format,
+                \item generation of a full pebble bed core model from a collection of user-defined yaml files, stored in a comprehensive Python 3 object complete with materials assigned to a polygon-based cross-sectional geometry,
+                \item and generation of a core input file for the Serpent 2 Monte Carlo code, converting arbitrary rectangular and triangular polygons, as well as other features, into appropriate Serpent surfaces and cell definitions; evaluation of complex multi-point surfaces into a series of polygons to describe highly-detailed features or core regions; automatic determination and elimination of overlapping surfaces; and handling of regions with multiple layered universes, and distributed pebble-bed fuel materials.
+                \end{list2}
+                \end{list2}
+    \textbf{University of California, Berkeley}, Berkeley, CA\\
+                \textsl{Graduate Student Researcher} \hfill
+                \textbf{Fall 2015 -- Summer 2021}\\
+                \textsl{Advisor: Professor Rachel N. Slaybaugh} -- \verb`slaybaugh@berkeley.edu`
+                \begin{list2}
+                \item[]                 Developed a novel finite-element-based code for the implementation and
+                assessment of acceleration methods for deterministic
+                solves of the transport
+                equation that leveraged modern \Cpp{} features, documentation systems, and testing frameworks.
+                \end{list2}
+
+    \textbf{The Idaho National Laboratory}, Idaho Falls, ID \\
+                \textsl{Student Intern - Reactor physics group} \hfill
+                \textbf{Summer 2016}\\
+                \textsl{Advisor: Dr. Mark DeHart} --
+                \verb`mark.dehart@inl.gov`
+                \begin{list2}
+                \item[] Implemented a novel delta-tracking algorithm for the Serpent 2 Monte Carlo code.
+                \end{list2}
+    \textbf{United States Navy} \\
+    \textsl{Submarine Officer -- Honorably discharged as a lieutenant (O-3)} \hfill \textbf{2008 -- Fall 2015}
+    \\\vspace{-3mm}
+    \begin{list2}
+    \item Coordinated submarine operations and international
+      participation for the Rim of the Pacific 2014 naval exercise
+      involving 23 nations, 46 ships and six submarines.
+    \item Supported two six-month deployments while qualified Officer
+      of the Deck and Engineering Officer of the Watch on Los Angeles class submarines.
+    \item Certified for assignment as Engineer Officer in charge of a Naval Nuclear Propulsion Plant.
+    \item Led divisions responsible for the maintenance and operation of reactor plant instrumentation, radiological controls, and water chemical analysis.
+      \item TS/SCI security clearance (single scope background investigation).
+          \end{list2}
+                
+    \section{\mysidestyle Publications \\ \& Proceedings}
+    %\section{\mysidestyle Refereed\\Journal\\Publications} % also, vspace below
+    \begin{bibsection}
+    \item \textbf{Rehak, J.S.}, Slaybaugh, R.N. ``Assessing the
+      Effectiveness of Acceleration Methods for Deterministic Neutron
+      Transport Solvers'' \textbf{Transactions of the American Nuclear
+        Society} Volume 122. \url{https://doi.org/10.13182/T122-32383} June 2020.\dagfoot
+      \item \textbf{Rehak, J.S.}, Kerby, L.M., DeHart, M.D., Slaybaugh, R.N.
+              ``Weighted delta-tracking in scattering media''
+              \textbf{Nuclear Engineering and Design} Volume 342.
+              \url{https://doi.org/10.1016/j.nucengdes.2018.12.006}. December 2018.\dagfoot
+            \item \textbf{Rehak, J.S.}, Kerby, L.M., DeHart, M.D., Slaybaugh, R.N., Lepp\"{a}nen, J.
+              ``Implementation of Weighted Delta-Tracking with Scattering in the Serpent 2 Monte Carlo Code''
+              \textbf{Transactions of the American Nuclear Society}
+              Volume
+              116. \url{https://escholarship.org/uc/item/6bg1s71k} June 2017.\dagfoot
+      \end{bibsection}
+      %\vspace{2mm} % add this back if you return to Refereed Journal..
+      %\section{\mysidestyle Submitted}
+      %\begin{bibenum}
+      %\end{bibenum}
+                
+
+    %__________________________________________________________________________________________________________________
+    % Honors and Awards
+    \section{\mysidestyle Honors and\\Awards}
+    Department of Nuclear Engineering Graduate Fellowship \hfill \textbf{2015 -- 2018}\\%
+    Navy and Marine Corps Commendation Medal \hfill \textbf{August 2015}\\\vspace{-3.5mm}
+        \begin{list2}
+        \item[] For exceptional service as Submarine Force Exercise Officer and Submarine Watch Officer at Commander Submarine Forces Pacific
+        \end{list2}\vspace{-3mm}
+    Navy and Marine Corps Achievement Medal \hfill \textbf{August 2015}\\\vspace{-3.5mm}
+        \begin{list2}
+        \item[] For coordination and execution of submarine operations for the Rim of the Pacific 2014 exercise
+        \end{list2}\vspace{-3mm}
+    Navy and Marine Corps Achievement Medal \hfill \textbf{June 2013}\\\vspace{-3.5mm}
+        \begin{list2}
+        \item[] For service as a division officer on USS JACKSONVILLE (SSN-699) and successful completion of two six-month deployments and an extended dry-dock maintenance period.
+        \end{list2}\vspace{-3mm}
+    Navy and Marine Corps Achievement Medal \hfill \textbf{April 2013}\\\vspace{-3.5mm}
+        \begin{list2}
+        \item[] For service as Chemistry/Radiological Assistant during an eight month dry-dock period.
+        \end{list2}\vspace{-3mm}
+    Navy and Marine Corps Achievement Medal \hfill \textbf{January 2011}\\\vspace{-3.5mm}
+        \begin{list2}
+        \item[] For service as Reactor Control Assistant during a six-month deployment and Operational Reactor Safeguards Exam
+        \end{list2}             \vspace{-3mm}           
+
+        
+        % __________________________________________________________________________________________________________________
+        \section{\mysidestyle Code Development}
+        \textbf{Bay Area Radiation Transport (BART)} \hfill
+        \url{https://github.com/SlaybaughLab/BART} \\
+        A finite-element-based transport solver that
+                  supports 1/2/3D and MPI, based on the \href{https://www.dealii.org/}{deal.II}
+                  finite element library.
+                \begin{list2}
+                \item Designed for developer end-users for maximum
+                  modification and support of methods analysis and
+                  implementation.
+                \item Designed to support reproducibility,
+                  portability, and testing in codes. utilizes
+                  continuous integration, code coverage, and Docker
+                  containers.
+                \item Uses a novel protocol-buffer format for materials.
+                \end{list2}
+    % Computer Skills
+    \section{\mysidestyle Scientific\\Computing\\Skills}
+                \textbf{Languages} \dotfill  Python 3, \Cpp{20}, bash\vspace{1mm}\\%
+                \textbf{Build Systems} \dotfill setuptools, make, CMake \vspace{1mm}\\%
+                \textbf{Testing} \dotfill pytest, GoogleTest, GoogleMock, continuous integration, code coverage\vspace{1mm}\\%
+                \textbf{Version Control} \dotfill git, github\vspace{1mm}\\%
+                \textbf{Other} \dotfill sphinx, Doxygen, \LaTeX, 
+                Protocol Buffers, Jupyter, Docker \vspace{1mm}%
+
+    %__________________________________________________________________________________________________________________
+    % References
+
+%\section{\mysidestyle References}
+%\texsl{Available upon request}
+
+%______________________________________________________________________________________________________________________
+
+
+    %__________________________________________________________________________________________________________________
+\end{resume}
+
+\end{document}
+
+
+%______________________________________________________________________________________________________________________
+% EOF
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
